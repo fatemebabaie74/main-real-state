@@ -12,7 +12,7 @@ function Sidebar() {
       </p>
       <Link href="/buy-residential">همه</Link>
       {Object.keys(categories).map((i) => (
-        <Link
+        <Link key={i.id}
           href={{
             pathname: "/buy-residential",
             query: { category: i },

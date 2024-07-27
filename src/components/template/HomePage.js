@@ -12,7 +12,7 @@ function HomePage() {
           <h1>سامانه خرید و اجاره ملک</h1>
           <ul>
             {services.map((i) => (
-              <li key={i}>
+              <li key={i.id}>
                 <FiCircle />
                 <span>{i}</span>
               </li>
@@ -22,14 +22,14 @@ function HomePage() {
       </div>
       <div className={styles.categories}>
         {Object.keys(categories).map((i) => (
-          <CategoryCard title={categories[i]} name={i} />
+          <CategoryCard title={categories[i]} name={i} key={i} />
         ))}
       </div>
       <div className={styles.city}>
         <h3>شهر های پر بازدید</h3>
         <ul>
           {cities.map((i) => (
-            <li key={i}>
+            <li key={i.id}>
               <FaCity />
               <span>{i}</span>
             </li>
